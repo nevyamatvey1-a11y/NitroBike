@@ -205,6 +205,70 @@
             .nav-links { display: none; } /* En producción requeriría un menú hamburguesa */
             .newsletter-form input { width: 100%; }
         }
+
+        /* ---------------------------
+           Estilos añadidos (no tocar)
+           --------------------------- */
+        .legal-section {
+            padding: 60px 0;
+            background: linear-gradient(180deg, #0f0f0f 0%, #0b0b0b 100%);
+            border-top: 1px solid #222;
+            color: #dcdcdc;
+        }
+
+        .legal-section .container { max-width: 900px; }
+
+        .legal-section h3 {
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-size: 1.6rem;
+        }
+
+        .legal-section p, .legal-section li {
+            color: #bdbdbd;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .contact-section {
+            padding: 60px 0;
+            background-color: #070707;
+            border-top: 1px solid #111;
+            color: #e6e6e6;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .contact-card {
+            background: #0e0e0e;
+            padding: 20px;
+            border: 1px solid #222;
+            border-radius: 8px;
+        }
+
+        .contact-card h4 { color: var(--primary); margin-bottom: 8px; }
+        .contact-card p { color: #cfcfcf; font-size: 0.95rem; }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+
+        .new-footer {
+            background: #000;
+            color: #ccc;
+            padding: 30px 0;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+
+        .new-footer .contact-data { margin-bottom: 10px; }
+        .new-footer .contact-data strong { color: var(--primary); display: inline-block; width: 140px; text-align: left; margin-right: 8px; }
+
     </style>
 </head>
 <body>
@@ -304,6 +368,74 @@
         </div>
     </section>
 
+    <!-- --- SECCIONES AÑADIDAS: Términos, Privacidad y Contacto --- -->
+    <section class="legal-section" id="terminos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Términos y Condiciones</h2>
+                <span></span>
+            </div>
+
+            <h3>1. Aceptación de los términos</h3>
+            <p>Al acceder y utilizar NitroBike aceptas estos Términos y Condiciones en su totalidad. Si no estás de acuerdo con alguna parte, no uses el sitio.</p>
+
+            <h3>2. Uso del contenido</h3>
+            <p>Los artículos, imágenes y recursos publicados en este sitio son para uso informativo. Está prohibida la reproducción total o parcial sin permiso. Puedes compartir enlaces siempre que se cite la fuente.</p>
+
+            <h3>3. Responsabilidad</h3>
+            <p>NitroBike no se hace responsable por daños, lesiones o pérdidas derivadas de la ejecución de las recomendaciones publicadas. Consulta a un profesional ante dudas técnicas o médicas.</p>
+
+            <h3>4. Modificaciones</h3>
+            <p>Podemos actualizar estos Términos en cualquier momento. Las modificaciones se aplicarán desde su publicación en esta página.</p>
+        </div>
+    </section>
+
+    <section class="legal-section" id="privacidad">
+        <div class="container">
+            <div class="section-title">
+                <h2>Política de Privacidad</h2>
+                <span></span>
+            </div>
+
+            <h3>1. Información que recopilamos</h3>
+            <p>Recopilamos la información que nos proporcionas voluntariamente (por ejemplo, correo para la newsletter) y datos técnicos necesarios para la operación del sitio.</p>
+
+            <h3>2. Uso de la información</h3>
+            <p>Los datos se usan para enviar boletines, administrar el sitio y mejorar la experiencia del usuario. No vendemos ni alquilamos datos personales a terceros con fines comerciales.</p>
+
+            <h3>3. Cookies</h3>
+            <p>Utilizamos cookies para mejorar la funcionalidad y analizar el uso. Puedes desactivar cookies desde tu navegador, aunque algunas funciones pueden dejar de estar disponibles.</p>
+
+            <h3>4. Derechos del usuario</h3>
+            <p>Tienes derecho a solicitar acceso, rectificación o eliminación de tus datos contactándonos en la dirección de correo que aparece más abajo.</p>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contacto</h2>
+                <span></span>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>Datos de contacto</h4>
+                    <p><strong>Nombre y apellidos:</strong><br> NAYELI VALCARCEL SANTELICES</p>
+                    <p><strong>Dirección:</strong><br> Av Cl 80 #89a-40<br> Bogotá, 111021<br> Colombia</p>
+                    <p><strong>Correo:</strong><br> <a href="mailto:nevyamatvey1@gmail.com">nevyamatvey1@gmail.com</a></p>
+                </div>
+
+                <div class="contact-card">
+                    <h4>Formulario rápido</h4>
+                    <p>¿Tienes dudas, sugerencias o quieres colaborar? Escríbenos vía correo: <a href="mailto:nevyamatvey1@gmail.com">nevyamatvey1@gmail.com</a></p>
+                    <p style="margin-top:12px; color:#bdbdbd; font-size:0.9rem;">(Si prefieres un formulario en línea, puedo agregar uno estilizado en la misma página.)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer original (se mantiene) -->
     <footer>
         <div class="container">
             <div class="footer-links">
@@ -313,6 +445,16 @@
                 <a href="#">Instagram</a>
             </div>
             <p class="copyright">&copy; 2024 NitroBike Blog. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Footer adicional con los datos solicitados -->
+    <footer class="new-footer" aria-label="footer-datos-contacto">
+        <div class="container">
+            <div class="contact-data"><strong>Nombre y apellidos:</strong> NAYELI VALCARCEL SANTELICES</div>
+            <div class="contact-data"><strong>Dirección:</strong> Av Cl 80 #89a-40, Bogotá, 111021, Colombia</div>
+            <div class="contact-data"><strong>Correo:</strong> <a href="mailto:nevyamatvey1@gmail.com">nevyamatvey1@gmail.com</a></div>
+            <div style="margin-top:10px; color:#666; font-size:0.85rem;">&copy; 2024 NitroBike Blog. Información de contacto registrada.</div>
         </div>
     </footer>
 
